@@ -58,21 +58,8 @@ class MyApp extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  "GoldCoin",
-                  style: goldcoinGreyStyle,
-                ),
-                Text(
-                  "Skip",
-                  style: goldcoinGreyStyle,
-                ),
-              ],
-            ),
           ),
-          Image.asset("assets/img/firstImage.png"),
+          Image.asset("assets/img/gdsc.png"),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
@@ -80,20 +67,20 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "Online",
+                  "GDSC",
                   style: greyStyle,
                 ),
                 Text(
-                  "Gambling",
+                  "google",
                   style: boldStyle,
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
                 Text(
-                  "Temporibus autem aut\n"
-                  "officiis debitis aut rerum\n"
-                  "necessitatibus",
+                  "googlegooglegoogle\n"
+                  "googlegooglegooglegoogle\n"
+                  "googlegooglegoogle",
                   style: descriptionGreyStyle,
                 ),
               ],
@@ -103,99 +90,35 @@ class MyApp extends StatelessWidget {
       ),
     ),
     Container(
-      color: Color(0xFF55006c),
+      color: Color(0xFFFFC905),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  "GoldCoin",
-                  style: goldCoinWhiteStyle,
-                ),
-                Text(
-                  "Skip",
-                  style: goldCoinWhiteStyle,
-                ),
-              ],
-            ),
           ),
-          Image.asset("assets/img/secondImage.png"),
+          Image.asset("assets/img/gdsc.png"),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "Online",
+                  "DNJNFJ",
                   style: whiteStyle,
                 ),
                 Text(
-                  "Gaming",
+                  "dfnDKLNFDsn",
                   style: boldStyle,
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
                 Text(
-                  "Excepteur sint occaecat cupidatat\n"
-                  "non proident, sunt in\n"
-                  "culpa qui officia",
-                  style: descriptionWhiteStyle,
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
-    ),
-    Container(
-      color: Colors.orange,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  "GoldCoin",
-                  style: goldCoinWhiteStyle,
-                ),
-                Text(
-                  "Skip",
-                  style: goldCoinWhiteStyle,
-                ),
-              ],
-            ),
-          ),
-          Image.asset("assets/img/firstImage.png"),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  "Online",
-                  style: whiteStyle,
-                ),
-                Text(
-                  "Gambling",
-                  style: boldStyle,
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Text(
-                  "Temporibus autem aut\n"
-                  "officiis debitis aut rerum\n"
-                  "necessitatibus",
+                  "NDjdnjDJNjBDHBjdbsjhbdfbhfhdb\n"
+                  "dddddddddddddddd\n"
+                  "fffffffffffff",
                   style: descriptionWhiteStyle,
                 ),
               ],

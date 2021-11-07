@@ -20,7 +20,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true 
   assets:
-    - assets/img/daiki.png
+    - assets/img/gdsc.png
     
   fonts:
     - family: Product Sans
