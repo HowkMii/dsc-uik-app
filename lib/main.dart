@@ -1,69 +1,223 @@
-import 'package:concentric_transition/clipper.dart';
-import 'package:concentric_transition/concentric_transition.dart';
 import 'package:flutter/material.dart';
+//import 'package:liquid_swipe/Constants/Helpers.dart';
+import 'package:liquid_swipe/liquid_swipe.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// Temporibus autem aut\n
+// officiis debitis aut rerum\n
+// necessitatibus
+
+// Excepteur sint occaecat cupidatat\n
+// non proident, sunt in\n
+// culpa qui officia
+
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  static const TextStyle goldcoinGreyStyle = TextStyle(
+      color: Colors.grey,
+      fontSize: 20.0,
+      fontWeight: FontWeight.bold,
+      fontFamily: "Product Sans");
 
-  // This widget is the root of your application.
+  static const TextStyle goldCoinWhiteStyle = TextStyle(
+      color: Colors.white,
+      fontSize: 20.0,
+      fontWeight: FontWeight.bold,
+      fontFamily: "Product Sans");
+
+  static const TextStyle greyStyle =
+      TextStyle(fontSize: 40.0, color: Colors.grey, fontFamily: "Product Sans");
+  static const TextStyle whiteStyle = TextStyle(
+      fontSize: 40.0, color: Colors.white, fontFamily: "Product Sans");
+
+  static const TextStyle boldStyle = TextStyle(
+    fontSize: 50.0,
+    color: Colors.black,
+    fontFamily: "Product Sans",
+    fontWeight: FontWeight.bold,
+  );
+
+  static const TextStyle descriptionGreyStyle = TextStyle(
+    color: Colors.grey,
+    fontSize: 20.0,
+    fontFamily: "Product Sans",
+  );
+
+  static const TextStyle descriptionWhiteStyle = TextStyle(
+    color: Colors.white,
+    fontSize: 20.0,
+    fontFamily: "Product Sans",
+  );
+
+  final pages = [
+    Container(
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "GoldCoin",
+                  style: goldcoinGreyStyle,
+                ),
+                Text(
+                  "Skip",
+                  style: goldcoinGreyStyle,
+                ),
+              ],
+            ),
+          ),
+          Image.asset("assets/img/firstImage.png"),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Online",
+                  style: greyStyle,
+                ),
+                Text(
+                  "Gambling",
+                  style: boldStyle,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  "Temporibus autem aut\n"
+                  "officiis debitis aut rerum\n"
+                  "necessitatibus",
+                  style: descriptionGreyStyle,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    ),
+    Container(
+      color: Color(0xFF55006c),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "GoldCoin",
+                  style: goldCoinWhiteStyle,
+                ),
+                Text(
+                  "Skip",
+                  style: goldCoinWhiteStyle,
+                ),
+              ],
+            ),
+          ),
+          Image.asset("assets/img/secondImage.png"),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Online",
+                  style: whiteStyle,
+                ),
+                Text(
+                  "Gaming",
+                  style: boldStyle,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  "Excepteur sint occaecat cupidatat\n"
+                  "non proident, sunt in\n"
+                  "culpa qui officia",
+                  style: descriptionWhiteStyle,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    ),
+    Container(
+      color: Colors.orange,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "GoldCoin",
+                  style: goldCoinWhiteStyle,
+                ),
+                Text(
+                  "Skip",
+                  style: goldCoinWhiteStyle,
+                ),
+              ],
+            ),
+          ),
+          Image.asset("assets/img/firstImage.png"),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Online",
+                  style: whiteStyle,
+                ),
+                Text(
+                  "Gambling",
+                  style: boldStyle,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  "Temporibus autem aut\n"
+                  "officiis debitis aut rerum\n"
+                  "necessitatibus",
+                  style: descriptionWhiteStyle,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'DSC IKU',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'DSC IKU'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  List<dynamic> pages = [
-    {
-      'image':
-          'https://ouch-cdn2.icons8.com/eW02ksQgD03vMcVQHZaqwFtb6reRJTvmEWPbixyFejc/rs:fit:392:392/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTg4/LzdhMzZlMDA3LWM4/OWQtNGVmOC04YjQ1/LTZhZWYzYjMxNGQ2/OC5wbmc.png',
-    }
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ConcentricPageView(
-        radius: 38,
-        verticalPosition: 0.8,
-        colors: [Colors.red, Colors.greenAccent, Colors.yellow, Colors.blue],
-        itemBuilder: (index, value) {
-          int pageindex = (index % pages.length);
-          return Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.network(
-                  pages[pageindex]['image'],
-                  width: 300,
-                ),
-                Text(
-                  'We are DSC not GDG',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
-                )
-              ],
-            ),
-          );
-        },
+      home: Scaffold(
+        body: LiquidSwipe(
+          pages: pages,
+          enableLoop: true,
+          fullTransitionValue: 300,
+          //enableSlideIcon: true,
+          waveType: WaveType.liquidReveal,
+          positionSlideIcon: 0.5,
+        ),
       ),
     );
   }

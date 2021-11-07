@@ -1,4 +1,4 @@
-# dscuik
+# dsc
 
 A new Flutter project.
 

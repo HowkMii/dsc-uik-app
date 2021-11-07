@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dscuik">
+    package="com.example.dsc">
    <application
-        android:label="dscuik"
+        android:label="dsc"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

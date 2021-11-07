@@ -1,4 +1,4 @@
-package com.example.dscuik
+package com.example.dsc
 
 import io.flutter.embedding.android.FlutterActivity
 
