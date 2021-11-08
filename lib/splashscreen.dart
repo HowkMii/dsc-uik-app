@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:dsc/swipel.dart';
+import 'package:dsciku/page.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -12,8 +12,7 @@ class _splashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(const Duration(milliseconds: 5000), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => Swipel()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Pview()));
     });
   }
 

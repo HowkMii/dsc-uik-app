@@ -1,15 +1,27 @@
-import 'package:dsc/splashscreen.dart';
-import 'package:dsc/swipel.dart';
+import 'package:dsciku/page.dart';
+import 'package:dsciku/splashScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:liquid_swipe/liquid_swipe.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/s': (ctx) => Splash(),
+        '/p': (ctx) => Pview(),
+      },
       debugShowCheckedModeBanner: false,
+      title: 'Dsciuk',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       home: Splash(),
     );
   }

@@ -1,12 +1,11 @@
 import 'dart:async';
 
-import 'package:dsc/qrcodescreen.dart';
+import 'package:dsciku/splashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
-class Swipel extends StatefulWidget {
-  Swipel({Key? key}) : super(key: key);
-
+class Pview extends StatefulWidget {
+  const Pview({Key? key}) : super(key: key);
   static const TextStyle goldcoinGreyStyle = TextStyle(
       color: Colors.grey,
       fontSize: 20.0,
@@ -44,19 +43,11 @@ class Swipel extends StatefulWidget {
   );
 
   @override
-  State<Swipel> createState() => _SwipelState();
+  _PviewState createState() => _PviewState();
 }
 
-class _SwipelState extends State<Swipel> {
-  void initState() {
-    super.initState();
-    Timer(const Duration(milliseconds: 5000), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => qrcode()));
-    });
-  }
-
-  final pages = [
+class _PviewState extends State<Pview> {
+  final List<Container> pages = [
     Container(
       color: Colors.white,
       child: Column(
@@ -75,11 +66,11 @@ class _SwipelState extends State<Swipel> {
               children: <Widget>[
                 Text(
                   "GDSC",
-                  style: Swipel.greyStyle,
+                  style: Pview.greyStyle,
                 ),
                 Text(
                   "google",
-                  style: Swipel.boldStyle,
+                  style: Pview.boldStyle,
                 ),
                 SizedBox(
                   height: 20.0,
@@ -88,7 +79,7 @@ class _SwipelState extends State<Swipel> {
                   "googlegooglegoogle\n"
                   "googlegooglegooglegoogle\n"
                   "googlegooglegoogle",
-                  style: Swipel.descriptionGreyStyle,
+                  style: Pview.descriptionGreyStyle,
                 ),
               ],
             ),
@@ -113,21 +104,19 @@ class _SwipelState extends State<Swipel> {
               children: <Widget>[
                 Text(
                   "DNJNFJ",
-                  style: Swipel.whiteStyle,
+                  style: Pview.whiteStyle,
                 ),
                 Text(
                   "dfnDKLNFDsn",
-                  style: Swipel.boldStyle,
+                  style: Pview.boldStyle,
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                Text(
-                  "NDjdnjDJNjBDHBjdbsjhbdfbhfhdb\n"
-                  "dddddddddddddddd\n"
-                  "fffffffffffff",
-                  style: Swipel.descriptionWhiteStyle,
-                ),
+                RaisedButton(
+                  onPressed: () {},
+                  child: Text("qr"),
+                )
               ],
             ),
           )
@@ -135,18 +124,25 @@ class _SwipelState extends State<Swipel> {
       ),
     ),
   ];
-
   @override
   Widget build(BuildContext context) {
+    @override
+    void initState() {
+      super.initState();
+      Timer(const Duration(milliseconds: 5000), () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Splash()));
+      });
+    }
+
     return Scaffold(
       body: LiquidSwipe(
         pages: pages,
         enableLoop: true,
-        fullTransitionValue: 300,
-        //enableSideReveal: true,
-        //enableSlideIcon: true,
+        fullTransitionValue: 900,
         waveType: WaveType.liquidReveal,
-        positionSlideIcon: 0.5,
+        slideIconWidget: Icon(Icons.arrow_back_ios),
+        positionSlideIcon: 0.7,
       ),
     );
   }
