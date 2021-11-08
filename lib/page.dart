@@ -127,6 +127,8 @@ class _PviewState extends State<Pview> {
       ),
     ),
   ];
+
+  int p = 0;
   @override
   Widget build(BuildContext context) {
     @override
@@ -146,7 +148,18 @@ class _PviewState extends State<Pview> {
         waveType: WaveType.liquidReveal,
         slideIconWidget: Icon(Icons.arrow_back_ios),
         positionSlideIcon: 0.7,
+        initialPage: p,
       ),
     );
   }
 }
+/*
+onPageChange: (initialPage) {
+          setState(() {
+            p = initialPage;
+            if (p == 1) {
+              Future.delayed(Duration(seconds: 4),
+                  () => Navigator.of(context).pushNamed('/q'));
+            }
+          });
+        },*/
