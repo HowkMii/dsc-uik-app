@@ -116,7 +116,7 @@ class _PviewState extends State<Pview> {
                 Builder(
                     builder: (ctx) => RaisedButton(
                           onPressed: () {
-                            Navigator.of(ctx).pushNamed('/s');
+                            Navigator.of(ctx).pushNamed('/q');
                           },
                           child: Text("qr"),
                         ))

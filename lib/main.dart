@@ -1,4 +1,5 @@
 import 'package:dsciku/page.dart';
+import 'package:dsciku/qrcodeScreen.dart';
 import 'package:dsciku/splashScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/s': (ctx) => Splash(),
         '/p': (ctx) => Pview(),
+        '/q': (ctx) => QrcodeScreen(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Dsciuk',
