@@ -113,10 +113,13 @@ class _PviewState extends State<Pview> {
                 SizedBox(
                   height: 20.0,
                 ),
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text("qr"),
-                )
+                Builder(
+                    builder: (ctx) => RaisedButton(
+                          onPressed: () {
+                            Navigator.of(ctx).pushNamed('/s');
+                          },
+                          child: Text("qr"),
+                        ))
               ],
             ),
           )

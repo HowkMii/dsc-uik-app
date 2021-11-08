@@ -52,8 +52,9 @@ class _splashState extends State<Splash> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+                  const SizedBox(height: 10),
                   Text(
-                    "HOWKMII",
+                    "GDSC IKU",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
