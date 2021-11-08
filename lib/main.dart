@@ -1,3 +1,4 @@
+import 'package:dsc/qrcodescreen.dart';
 import 'package:flutter/material.dart';
 //import 'package:liquid_swipe/Constants/Helpers.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
@@ -96,10 +97,6 @@ class MyApp extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          ),
-          Image.asset("assets/img/gdsc.png"),
-          Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,6 +118,42 @@ class MyApp extends StatelessWidget {
                   "fffffffffffff",
                   style: descriptionWhiteStyle,
                 ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  height: 80.0,
+                  child: SizedBox.fromSize(
+                    size: Size(80, 80), // button width and height
+                    child: ClipOval(
+                      child: Material(
+                        color: Color.fromRGBO(0, 160, 227, 1), // button color
+                        child: InkWell(
+                          splashColor: Color.fromRGBO(248, 177, 1, 1),
+                          // splash color
+                          onTap: () {
+                            qrcode();
+                          },
+                          // button pressed
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Icon(
+                                Icons.call,
+                                color: Colors.white,
+                              ), // icon
+                              Text(
+                                "Call",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                ),
+                              ), // text
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           )
@@ -137,6 +170,7 @@ class MyApp extends StatelessWidget {
           pages: pages,
           enableLoop: true,
           fullTransitionValue: 300,
+          //enableSideReveal: true,
           //enableSlideIcon: true,
           waveType: WaveType.liquidReveal,
           positionSlideIcon: 0.5,
