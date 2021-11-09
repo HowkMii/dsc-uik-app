@@ -148,13 +148,12 @@ class _PviewState extends State<Pview> {
         waveType: WaveType.liquidReveal,
         slideIconWidget: Icon(Icons.arrow_back_ios),
         positionSlideIcon: 0.7,
-        initialPage: p,
       ),
     );
   }
 }
 /*
-onPageChange: (initialPage) {
+Change: (initialPage) {
           setState(() {
             p = initialPage;
             if (p == 1) {

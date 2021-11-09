@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   liquid_swipe: ^2.1.1
+  qr_code_scanner: ^0.6.1
 
 
   # The following adds the Cupertino Icons font to your application.
