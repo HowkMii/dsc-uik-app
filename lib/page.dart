@@ -126,6 +126,40 @@ class _PviewState extends State<Pview> {
         ],
       ),
     ),
+    Container(
+      width: 1000,
+      height: 1000,
+      color: Color(0xFFFFFFFF),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          ),
+          Image.asset(
+            "assets/img/scan.png",
+            height: 400,
+            width: 400,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Builder(
+                    builder: (ctx) => TextButton(
+                          onPressed: () {
+                            Navigator.of(ctx).pushNamed('/q');
+                          },
+                          child: Text("Skip"),
+                        ))
+              ],
+            ),
+          )
+        ],
+      ),
+    ),
   ];
 
   int p = 0;
