@@ -88,7 +88,7 @@ class _PviewState extends State<Pview> {
       ),
     ),
     Container(
-      color: Color(0xFFFFC905),
+      color: Color(0xFFFFD523),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,26 +100,104 @@ class _PviewState extends State<Pview> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "DNJNFJ",
-                  style: Pview.whiteStyle,
+                  "GDSC",
+                  style: Pview.greyStyle,
                 ),
                 Text(
-                  "dfnDKLNFDsn",
+                  "google",
                   style: Pview.boldStyle,
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                Builder(
-                    builder: (ctx) => TextButton(
-                          onPressed: () {
-                            Navigator.of(ctx).pushNamed('/q');
-                          },
-                          child: Text("Skip"),
-                        ))
+                Text(
+                  "googlegooglegoogle\n"
+                  "googlegooglegooglegoogle\n"
+                  "googlegooglegoogle",
+                  style: Pview.descriptionGreyStyle,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    ),
+    Container(
+      color: Color(0xFFFFFFFF),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          ),
+          Image.asset("assets/img/gdsc.png"),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "GDSC",
+                  style: Pview.greyStyle,
+                ),
+                Text(
+                  "google",
+                  style: Pview.boldStyle,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  "googlegooglegoogle\n"
+                  "googlegooglegooglegoogle\n"
+                  "googlegooglegoogle",
+                  style: Pview.descriptionGreyStyle,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    ),
+    Container(
+      color: Color(0xFFFFD523),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          ),
+          Image.asset("assets/img/gdsc.png"),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "GDSC",
+                  style: Pview.greyStyle,
+                ),
+                Text(
+                  "google",
+                  style: Pview.boldStyle,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  "googlegooglegoogle\n"
+                  "googlegooglegooglegoogle\n"
+                  "googlegooglegoogle",
+                  style: Pview.descriptionGreyStyle,
+                ),
               ],
             ),
           )
@@ -143,19 +221,20 @@ class _PviewState extends State<Pview> {
             width: 400,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Builder(
-                    builder: (ctx) => TextButton(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Center(
+                child: Builder(
+                    builder: (ctx) => FloatingActionButton.extended(
                           onPressed: () {
                             Navigator.of(ctx).pushNamed('/q');
                           },
-                          child: Text("Skip"),
-                        ))
-              ],
-            ),
+                          backgroundColor: Colors.black,
+                          icon: Icon(
+                            Icons.qr_code,
+                            size: 30,
+                          ),
+                          label: Text("Scan", style: TextStyle(fontSize: 24)),
+                        ))),
           )
         ],
       ),
