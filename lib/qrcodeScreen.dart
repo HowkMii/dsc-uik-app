@@ -32,10 +32,12 @@ class _QrcodeScreenState extends State<QrcodeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   if (result != null)
-                    Text(
+                    SelectableText(
                       '${result!.code}',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      toolbarOptions:
+                          ToolbarOptions(copy: true, selectAll: true),
                     )
                   else
                     const Text('Scan a code'),
