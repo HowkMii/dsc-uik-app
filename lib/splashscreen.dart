@@ -33,7 +33,7 @@ class _splashState extends State<Splash> {
             ),
             Center(
               child: Image.asset(
-                "assets/img/gdsc.png",
+                "assets/img/logo.png",
                 height: 200,
                 width: 200,
               ),

@@ -61,6 +61,7 @@ flutter:
   assets:
     - assets/img/gdsc.png
     - assets/img/scan.png
+    - assets/img/logo.png
     
   fonts:
     - family: Product Sans
