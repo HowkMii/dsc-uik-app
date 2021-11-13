@@ -257,7 +257,7 @@ class _PviewState extends State<Pview> {
       body: LiquidSwipe(
         pages: pages,
         enableLoop: true,
-        fullTransitionValue: 900,
+        fullTransitionValue: 500,
         waveType: WaveType.liquidReveal,
         slideIconWidget: Icon(Icons.arrow_back_ios),
         positionSlideIcon: 0.7,

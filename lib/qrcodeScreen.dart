@@ -27,20 +27,18 @@ class _QrcodeScreenState extends State<QrcodeScreen> {
           Expanded(
             flex: 1,
             child: FittedBox(
-              fit: BoxFit.none,
+              fit: BoxFit.contain,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   if (result != null)
                     SelectableText(
                       '${result!.code}',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       toolbarOptions:
                           ToolbarOptions(copy: true, selectAll: true),
                     )
                   else
-                    const Text('Scan a code'),
+                    const Text(' ________Scan QR code to join us________ '),
                 ],
               ),
             ),
