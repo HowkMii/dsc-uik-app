@@ -1,3 +1,4 @@
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
@@ -32,10 +33,17 @@ class _QrcodeScreenState extends State<QrcodeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   if (result != null)
-                    SelectableText(
-                      '${result!.code}',
-                      toolbarOptions:
-                          ToolbarOptions(copy: true, selectAll: true),
+                    Row(
+                      children: [
+                        Text(
+                          '${result!.code}',
+                        ),
+                        IconButton(
+                            onPressed: () async {
+                              await FlutterClipboard.copy('${result!.code}');
+                            },
+                            icon: Icon(Icons.content_copy))
+                      ],
                     )
                   else
                     const Text(' ________Scan QR code to join us________ '),
