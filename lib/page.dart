@@ -106,8 +106,8 @@ class _PviewState extends State<Pview> {
                   height: 15.0,
                 ),
                 Text(
-                  "Student who \n"
-                  "to made a difference.\n",
+                  "Students who wish \n"
+                  "to make a difference.\n",
                   style: Pview.descriptionGreyStyle,
                 ),
               ],
@@ -138,7 +138,7 @@ class _PviewState extends State<Pview> {
                 Text(
                   "We ..e..r..\n"
                   "We S..a..e\n"
-                  "We ..r..w ...together\n",
+                  "We  ..r..w  ...together\n",
                   style: Pview.descriptionWhiteStylee,
                 ),
               ],
