@@ -117,15 +117,23 @@ class _PviewState extends State<Pview> {
       ),
     ),
     Container(
+      width: 1000,
+      height: 1000,
       color: Color(0xFF000000),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
           ),
-          Image.asset("assets/img/blackb.png"),
+          Center(
+            child: Image.asset(
+              "assets/img/blackb.png",
+              width: 150,
+              height: 150,
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
@@ -148,15 +156,23 @@ class _PviewState extends State<Pview> {
       ),
     ),
     Container(
+      width: 1000,
+      height: 1000,
       color: Color(0xFFFFFFFF),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
           ),
-          Image.asset("assets/img/whiteb.png"),
+          Center(
+            child: Image.asset(
+              "assets/img/whiteb.png",
+              width: 150,
+              height: 150,
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
@@ -189,10 +205,12 @@ class _PviewState extends State<Pview> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
           ),
-          Image.asset(
-            "assets/img/scan.png",
-            height: 500,
-            width: 500,
+          Center(
+            child: Image.asset(
+              "assets/img/scan.png",
+              height: 500,
+              width: 500,
+            ),
           ),
           SizedBox(
             height: 20,
